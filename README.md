@@ -54,10 +54,10 @@ Each line should contain:
 <topic> <payload> <path-to-script-to-run>
 
 Example:
-
+```
 Telemetry/Dashboard/Flags/LandingGearDown 1 "./enabling/landing.sh"
 Telemetry/Dashboard/Flags/LandingGearDown 0 "./disabling/landing-off.sh"
-
+```
 ## Stopping
 If launching headless, use an external script to kill, for example:
 
