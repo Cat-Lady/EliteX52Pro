@@ -67,7 +67,7 @@ silent-running.config
 
 
 Each line should contain:
-<topic> <payload> <path-to-script-to-run>
+``<topic> <payload> <path-to-script-to-run>``
 
 
 Example:
