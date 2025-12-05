@@ -1,0 +1,22 @@
+[project]
+name = "elitex52pro"
+version = "1.0.0"
+description = "Local MQTT-driven automation bridge for Logitech X52 Pro LEDs in Elite Dangerous. Requires EDMC and EDMC-Telemetry plugin (fork with splitting flags, e.g. https://github.com/Cat-Lady/EDMC-Telemetry)."
+readme = "README.md"
+authors = [
+  { name = "Cat Lady", email = "twilight312@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+
+dependencies = [
+  "paho-mqtt>=1.6",
+  "psutil>=5.9"
+]
+
+[project.scripts]
+elitex52pro = "elitex52pro:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
