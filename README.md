@@ -58,6 +58,9 @@ Example:
 Telemetry/Dashboard/Flags/LandingGearDown 1 "./enabling/landing.sh"
 Telemetry/Dashboard/Flags/LandingGearDown 0 "./disabling/landing-off.sh"
 ```
+
+The default.config and silent-running.config are populated with entries for using scripts from /enabling and /disabling directories. Default color schemes are in the /base directory. One can use them as-is for pretty complete set, edit them, or to use as examples for creating completely new ones.
+
 ## Stopping
 If launching headless, use an external script to kill, for example:
 
