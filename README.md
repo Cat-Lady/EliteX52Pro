@@ -28,31 +28,31 @@ and triggers corresponding (fully customizable) LED scripts.
 ## ⚙️ Installation
 
 
-### Option 1 (system install)
-Install paho-mqtt (for example, on Debian-based systems: apt-get install python3-paho-mqtt)
+### Install paho-mqtt:
 
 
-Run with:
-
-python3 elitex52pro.py [--debug]
-
-
-### Option 2: With pip
-python3 -m pip install paho-mqtt
+#### Option 1 (system install)
+``apt-get install python3-paho-mqtt`` (or quivalent for other package managers)
 
 
-Run with:
-
-python3 elitex52pro.py [--debug]
-
-
-### Option 3 (pipx external environment)
-pipx install .
+#### Option 2: With pip
+``python3 -m pip install paho-mqtt``
 
 
-Run with:
+#### Option 3 (pipx external environment)
+``pipx install .``
 
-elitex52pro [--debug]
+
+### download the code:
+
+either the zip file (unpack it), or with git:
+
+``git clone https://github.com/Cat-Lady/EliteX52Pro.git``
+
+
+### Run with:
+
+``python3 elitex52pro.py [--debug]``
 
 
 ## 📁 Config files
@@ -61,9 +61,9 @@ elitex52pro [--debug]
 Edit your configuration files in the same directory as the script:
 
 
-default.config
+``default.config``
 
-silent-running.config
+``silent-running.config``
 
 
 Each line should contain:
@@ -71,13 +71,14 @@ Each line should contain:
 
 
 Example:
+
 ```
 Telemetry/Dashboard/Flags/LandingGearDown 1 "./enabling/landing.sh"
 Telemetry/Dashboard/Flags/LandingGearDown 0 "./disabling/landing-off.sh"
 ```
 
 
-The default.config and silent-running.config are populated with entries for using scripts from /enabling and /disabling directories. Default color schemes are in the /base directory. One can use them as-is for pretty complete set, edit them, or to use as examples for creating completely new ones.
+The `default.config` and `silent-running.config` are populated with entries for using scripts from `/enabling` and `/disabling` directories. Default color schemes are in the `/base` directory. One can use them as-is for pretty complete set, edit them, or to use as examples for creating completely new ones.
 
 
 ## Stopping
@@ -94,5 +95,7 @@ fi
 
 
 ## 📜 License
+```
 MIT License.
 Free for personal and non-commercial use.
+```
