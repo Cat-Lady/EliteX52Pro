@@ -27,28 +27,44 @@ and triggers corresponding (fully customizable) LED scripts.
 
 ## ⚙️ Installation
 
+
 ### Option 1 (system install)
 Install paho-mqtt (for example, on Debian-based systems: apt-get install python3-paho-mqtt)
+
+
 Run with:
+
 python3 elitex52pro.py [--debug]
+
 
 ### Option 2: With pip
 python3 -m pip install paho-mqtt
+
+
 Run with:
+
 python3 elitex52pro.py [--debug]
 
 
 ### Option 3 (pipx external environment)
 pipx install .
+
+
 Run with:
+
 elitex52pro [--debug]
+
 
 ## 📁 Config files
 
+
 Edit your configuration files in the same directory as the script:
 
+
 default.config
+
 silent-running.config
+
 
 Each line should contain:
 <topic> <payload> <path-to-script-to-run>
