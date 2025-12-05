@@ -61,12 +61,14 @@ Telemetry/Dashboard/Flags/LandingGearDown 0 "./disabling/landing-off.sh"
 ## Stopping
 If launching headless, use an external script to kill, for example:
 
-```#!/bin/bash
+```
+#!/bin/bash
 PID_FILE="/tmp/elitex52pro.pid"
 if [ -f "$PID_FILE" ]; then
     kill "$(cat "$PID_FILE")"
     rm -f "$PID_FILE"
-fi```
+fi
+```
 
 ## 📜 License
 MIT License.
