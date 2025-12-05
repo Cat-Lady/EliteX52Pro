@@ -27,47 +27,75 @@ and triggers corresponding (fully customizable) LED scripts.
 
 ## ⚙️ Installation
 
-### Option 1 (system install)
-Install paho-mqtt (for example, on Debian-based systems: apt-get install python3-paho-mqtt)
-Run with:
-python3 elitex52pro.py [--debug]
 
-### Option 2: With pip
-python3 -m pip install paho-mqtt
-Run with:
-python3 elitex52pro.py [--debug]
+### Install paho-mqtt:
 
 
-### Option 3 (pipx external environment)
-pipx install .
-Run with:
-elitex52pro [--debug]
+#### Option 1 (system install)
+``apt-get install python3-paho-mqtt`` (or quivalent for other package managers)
+
+
+#### Option 2: With pip
+``python3 -m pip install paho-mqtt``
+
+
+#### Option 3 (pipx external environment)
+``pipx install .``
+
+
+### download the code:
+
+either the zip file (unpack it), or with git:
+
+``git clone https://github.com/Cat-Lady/EliteX52Pro.git``
+
+
+### Run with:
+
+``python3 elitex52pro.py [--debug]``
+
 
 ## 📁 Config files
 
+
 Edit your configuration files in the same directory as the script:
 
-default.config
-silent-running.config
+
+``default.config``
+
+``silent-running.config``
+
 
 Each line should contain:
-<topic> <payload> <path-to-script-to-run>
+``<topic> <payload> <path-to-script-to-run>``
+
 
 Example:
 
+```
 Telemetry/Dashboard/Flags/LandingGearDown 1 "./enabling/landing.sh"
 Telemetry/Dashboard/Flags/LandingGearDown 0 "./disabling/landing-off.sh"
+```
+
+
+The `default.config` and `silent-running.config` are populated with entries for using scripts from `/enabling` and `/disabling` directories. Default color schemes are in the `/base` directory. One can use them as-is for pretty complete set, edit them, or to use as examples for creating completely new ones.
+
 
 ## Stopping
 If launching headless, use an external script to kill, for example:
 
-```#!/bin/bash
+```
+#!/bin/bash
 PID_FILE="/tmp/elitex52pro.pid"
 if [ -f "$PID_FILE" ]; then
     kill "$(cat "$PID_FILE")"
     rm -f "$PID_FILE"
-fi```
+fi
+```
+
 
 ## 📜 License
+```
 MIT License.
 Free for personal and non-commercial use.
+```
